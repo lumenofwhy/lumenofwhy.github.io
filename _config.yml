@@ -103,5 +103,5 @@ theme: fluid
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: 'git'
-  repo: https://github.com/lumenofwhy/lumenofwhy.github.io.git
+  repo: git@outside.github.com:lumenofwhy/lumenofwhy.github.io.git
   branch: [main]
