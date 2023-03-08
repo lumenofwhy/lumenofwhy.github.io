@@ -9,7 +9,6 @@ categories:
   - 软件及自定义配置
 keywords: windows,软件
 description: windows下的常用软件
-hidden: true
 ---
 
 ## 编程类
@@ -29,7 +28,6 @@ hidden: true
 | :----: | :------: | :--------: |
 |        |          |            |
 |        |          |            |
-
 
 ## 生活类
 
