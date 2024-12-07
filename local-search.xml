@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>测试</title>
+    <link href="/posts/17ef1b6d.html"/>
+    <url>/posts/17ef1b6d.html</url>
+    
+    <content type="html"><![CDATA[<p>dddd</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>分类测试</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>windows下的CMake使用</title>
     <link href="/posts/baf80963.html"/>
     <url>/posts/baf80963.html</url>
