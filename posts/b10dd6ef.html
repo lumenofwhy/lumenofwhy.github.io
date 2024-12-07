@@ -24,10 +24,10 @@
 <meta property="og:description" content="windows下的Vcode+MinGW+Vcpkg的使用">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-10-12T08:58:29.000Z">
-<meta property="article:modified_time" content="2024-12-06T15:35:03.902Z">
+<meta property="article:modified_time" content="2024-12-07T13:35:09.450Z">
 <meta property="article:author" content="lumenofwhy">
-<meta property="article:tag" content="windows">
 <meta property="article:tag" content="工具使用">
+<meta property="article:tag" content="windows">
 <meta name="twitter:card" content="summary_large_image">
   
   
@@ -221,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          344 字
+          357 字
         
       </span>
     
@@ -274,27 +274,28 @@
             
               <div class="markdown-body">
                 
-                <h2 id="Vscode-安装"><a href="#Vscode-安装" class="headerlink" title="Vscode 安装"></a>Vscode 安装</h2><p>Microsoft Store 中安装</p>
-<h3 id="Vscode-右键菜单配置"><a href="#Vscode-右键菜单配置" class="headerlink" title="Vscode 右键菜单配置"></a>Vscode 右键菜单配置</h3><h4 id="空白处右键菜单里显示“Open-with-Code”"><a href="#空白处右键菜单里显示“Open-with-Code”" class="headerlink" title="空白处右键菜单里显示“Open with Code”"></a>空白处右键菜单里显示“Open with Code”</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs reg">Windows Registry Editor Version 5.00<br><br>[HKEY_CLASSES_ROOT\Directory\Background\shell\VSCode]<br>@=&quot;Open with Code&quot;<br>&quot;Icon&quot;=&quot;C:\\Program Files\\Microsoft VS Code\\Code.exe&quot;<br><br>[HKEY_CLASSES_ROOT\Directory\Background\shell\VSCode\command]<br>@=&quot;\&quot;C:\\Program Files\\Microsoft VS Code\\Code.exe\&quot; \&quot;%V\&quot;&quot;<br></code></pre></td></tr></table></figure>
+                <h1 id="windows下的Vscode-MinGW-Vcpkg的使用"><a href="#windows下的Vscode-MinGW-Vcpkg的使用" class="headerlink" title="windows下的Vscode-MinGW-Vcpkg的使用"></a>windows下的Vscode-MinGW-Vcpkg的使用</h1><h2 id="Vscode-安装"><a href="#Vscode-安装" class="headerlink" title="Vscode 安装"></a>Vscode 安装</h2><p>Microsoft Store 中安装</p>
+<h3 id="Vscode-右键菜单”置"><a href="#Vscode-右键菜单”置" class="headerlink" title="Vscode 右键菜单”置"></a>Vscode 右键菜单”置</h3><p>##W# 空白处右键菜”里显示”Open with Code”</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs reg">Windows Registry Editor Version 5.00<br><br>[HKEY_CLASSES_ROOT\Directory\Background\shell\VSCode]<br>@=&quot;Open with Code&quot;<br>&quot;Icon&quot;=&quot;C:\\Program Files\\Microsoft VS Code\\Code.exe&quot;<br><br>[HKEY_CLASSES_ROOT\Directory\Background\shell\VSCode\command]<br>@=&quot;\&quot;C:\\Program Files\\Microsoft VS Code\\Code.exe\&quot; \&quot;%V\&quot;&quot;<br></code></pre></td></tr></table></figure>
 
-<h4 id="选中文件右键菜单里显示“Open-with-Code”"><a href="#选中文件右键菜单里显示“Open-with-Code”" class="headerlink" title="选中文件右键菜单里显示“Open with Code”"></a>选中文件右键菜单里显示“Open with Code”</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs reg">Windows Registry Editor Version 5.00<br><br>[HKEY_CLASSES_ROOT\*\shell\VSCode]<br>@=&quot;Open with Code&quot;<br>&quot;Icon&quot;=&quot;C:\\Program Files\\Microsoft VS Code\\Code.exe&quot;<br><br>[HKEY_CLASSES_ROOT\*\shell\VSCode\command]<br>@=&quot;\&quot;C:\\Program Files\\Microsoft VS Code\\Code.exe\&quot; \&quot;%1\&quot;&quot;<br></code></pre></td></tr></table></figure>
+<h4 id="选中文件右键”单里显示”Wpen-with”Code”"><a href="#选中文件右键”单里显示”Wpen-with”Code”" class="headerlink" title="选中文件右键”单里显示”Wpen with”Code”"></a>选中文件右键”单里显示”Wpen with”Code”</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs reg">Windows Registry Editor Version 5.00<br><br>[HKEY_CLASSES_ROOT\*\shell\VSCode]<br>@=&quot;Open with Code&quot;<br>&quot;Icon&quot;=&quot;C:\\Program Files\\Microsoft VS Code\\Code.exe&quot;<br><br>[HKEY_CLASSES_ROOT\*\shell\VSCode\command]<br>@=&quot;\&quot;C:\\Program Files\\Microsoft VS Code\\Code.exe\&quot; \&quot;%1\&quot;&quot;<br></code></pre></td></tr></table></figure>
 
-<h4 id="选中文件夹右键菜单里显示“Open-with-Code”"><a href="#选中文件夹右键菜单里显示“Open-with-Code”" class="headerlink" title="选中文件夹右键菜单里显示“Open with Code”"></a>选中文件夹右键菜单里显示“Open with Code”</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs reg">Windows Registry Editor Version 5.00<br><br>[HKEY_CLASSES_ROOT\Directory\shell\VSCode]<br>@=&quot;Open with Code&quot;<br>&quot;Icon&quot;=&quot;C:\\Program Files\\Microsoft VS Code\\Code.exe&quot;<br><br>[HKEY_CLASSES_ROOT\Directory\shell\VSCode\command]<br>@=&quot;\&quot;C:\\Program Files\\Microsoft VS Code\\Code.exe\&quot; \&quot;%V\&quot;&quot;<br></code></pre></td></tr></table></figure>
+<h4 id="选中文件夹右键”单里显示”Wpen-with”Code”"><a href="#选中文件夹右键”单里显示”Wpen-with”Code”" class="headerlink" title="选中文件夹右键”单里显示”Wpen with”Code”"></a>选中文件夹右键”单里显示”Wpen with”Code”</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs reg">Windows Registry Editor Version 5.00<br><br>[HKEY_CLASSES_ROOT\Directory\shell\VSCode]<br>@=&quot;Open with Code&quot;<br>&quot;Icon&quot;=&quot;C:\\Program Files\\Microsoft VS Code\\Code.exe&quot;<br><br>[HKEY_CLASSES_ROOT\Directory\shell\VSCode\command]<br>@=&quot;\&quot;C:\\Program Files\\Microsoft VS Code\\Code.exe\&quot; \&quot;%V\&quot;&quot;<br></code></pre></td></tr></table></figure>
 
 <h3 id="Vscode-需要的插件"><a href="#Vscode-需要的插件" class="headerlink" title="Vscode 需要的插件"></a>Vscode 需要的插件</h3><ol>
 <li>C&#x2F;C++</li>
 <li>CMake</li>
 <li>CMake Tools</li>
 </ol>
-<h2 id="MingGW-安装"><a href="#MingGW-安装" class="headerlink" title="MingGW 安装"></a>MingGW 安装</h2><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmd">scoop install gcc -g<br></code></pre></td></tr></table></figure>
+<h2 id="MingGW-安装"><a href="#MingGW-安装" class="headerlink" title="MingGW 安装"></a>MingGW 安装</h2><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs cmd">scoop install gcc -g<br>```M<br>## make 安装<br><br>```<span class="hljs-built_in">cmd</span><br>scoop install make -g<br></code></pre></td></tr></table></figure>
 
-<h2 id="make-安装"><a href="#make-安装" class="headerlink" title="make 安装"></a>make 安装</h2><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmd">scoop install make -g<br></code></pre></td></tr></table></figure>
+<p>##Ccmake 安装</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmd">scoop install cmake -g<br></code></pre></td></tr></table></figure>
 
-<h2 id="cmake-安装"><a href="#cmake-安装" class="headerlink" title="cmake 安装"></a>cmake 安装</h2><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmd">scoop install cmake -g<br></code></pre></td></tr></table></figure>
+<p>##Vvcpkg 安装</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmd">scoop install vcpkg -g<br></code></pre></td></tr></table></figure>
 
-<h2 id="vcpkg-安装"><a href="#vcpkg-安装" class="headerlink" title="vcpkg 安装"></a>vcpkg 安装</h2><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmd">scoop install vcpkg -g<br></code></pre></td></tr></table></figure>
-
-<h2 id="Vscode中配置使用-MinGW-cmake-vcpkg"><a href="#Vscode中配置使用-MinGW-cmake-vcpkg" class="headerlink" title="Vscode中配置使用 MinGW + cmake + vcpkg"></a>Vscode中配置使用 MinGW + cmake + vcpkg</h2><h3 id="配置系统环境变量"><a href="#配置系统环境变量" class="headerlink" title="配置系统环境变量"></a>配置系统环境变量</h3><table>
+<h2 id="Vscode中配置使用-MinGW-Ccmake-Vvcpkg"><a href="#Vscode中配置使用-MinGW-Ccmake-Vvcpkg" class="headerlink" title="Vscode中配置使用 MinGW +Ccmake +Vvcpkg"></a>Vscode中配置使用 MinGW +Ccmake +Vvcpkg</h2><h3 id="配置系统环境变量"><a href="#配置系统环境变量" class="headerlink" title="配置系统环境变量"></a>配置系统环境变量</h3><table>
 <thead>
 <tr>
 <th align="center">环境变量</th>
@@ -310,11 +311,11 @@
 <td align="center">x64-mingw-dynamic</td>
 </tr>
 </tbody></table>
-<h3 id="初始化-vcpkg-并安装包"><a href="#初始化-vcpkg-并安装包" class="headerlink" title="初始化 vcpkg 并安装包"></a>初始化 vcpkg 并安装包</h3><p><a target="_blank" rel="noopener" href="https://github.com/microsoft/vcpkg/blob/master/README_zh_CN.md">中文官网</a></p>
+<h3 id="初始化Vvcpkg-并安装包"><a href="#初始化Vvcpkg-并安装包" class="headerlink" title="初始化Vvcpkg 并安装包"></a>初始化Vvcpkg 并安装包</h3><p><a target="_blank" rel="noopener" href="https://github.com/microsoft/vcpkg/blob/master/README_zh_CN.md">中文官网</a></p>
 <p><a target="_blank" rel="noopener" href="https://github.com/microsoft/vcpkg/blob/master/docs/users/mingw.md">vcpkg and Mingw-w64</a></p>
-<h3 id="配置-vscode-settings-json"><a href="#配置-vscode-settings-json" class="headerlink" title="配置 vscode settings.json"></a>配置 vscode settings.json</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;cmake.cmakePath&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;[cmake root]/bin/cmake.exe&quot;</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;cmake.mingwSearchDirs&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>        <span class="hljs-string">&quot;[MinGW root]/bin&quot;</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br><br>  <span class="hljs-attr">&quot;cmake.configureSettings&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-attr">&quot;CMAKE_TOOLCHAIN_FILE&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;[vcpkg root]/scripts/buildsystems/vcpkg.cmake&quot;</span><br>  <span class="hljs-punctuation">&#125;</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
+<h3 id="配置Vvscode-settings-json"><a href="#配置Vvscode-settings-json" class="headerlink" title="配置Vvscode settings.json"></a>配置Vvscode settings.json</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;cmake.cmakePath&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;[cmake root]/bin/cmake.exe&quot;</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;cmake.mingwSearchDirs&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>        <span class="hljs-string">&quot;[MinGW root]/bin&quot;</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br><br>  <span class="hljs-attr">&quot;cmake.configureSettings&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-attr">&quot;CMAKE_TOOLCHAIN_FILE&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;[vcpkg root]/scripts/buildsystems/vcpkg.cmake&quot;</span><br>  <span class="hljs-punctuation">&#125;</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
 
-<p>在项目的 CMakeLists.txt 添加<br>(有时候配置的系统环境变量会失效。。。)</p>
+<p>在项目的 CMakeLists.t加 x 添 加  加<br>(有时候配置的系统环境变量会失效。。。)</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cmd"><span class="hljs-built_in">set</span>(VCPKG_TARGET_TRIPLET &quot;x64-mingw-dynamic&quot; CACHE STRING &quot;VCPKG Target Triplet to use&quot;)<br><span class="hljs-built_in">set</span>(VCPKG_DEFAULT_HOST_TRIPLET &quot;x64-mingw-dynamic&quot;)<br></code></pre></td></tr></table></figure>
 
 <blockquote>
@@ -357,9 +358,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/windows/" class="print-no-link">#windows</a>
-      
         <a href="/tags/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/" class="print-no-link">#工具使用</a>
+      
+        <a href="/tags/windows/" class="print-no-link">#windows</a>
       
     </div>
   
